@@ -1,7 +1,32 @@
 {% extends 'base.html' %}
-
-{% block body %}
+    {% block title %}
+        <title>ТОВ "Агрохолдинг 2012"</title>
+    {% endblock title %}
+{% block head %}
     {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Агрохолдинг 2012, агрохолдинг, аграрії, паї, земля" />
+    <!-- css links -->
+    <link href={% static "css/bootstrap.min.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/font-awesome.min.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/typo.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/hoverex-all.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/inner.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/caption-hover.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/circle-hover.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/slider.css" %} rel="stylesheet" type="text/css" media="all" />
+    <link href={% static "css/style.css" %} rel="stylesheet" type="text/css" media="all" />
+    <!-- /css links -->
+    <!-- font files -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <!-- font files -->
+    <!-- js files  -->
+    <script src={% static "js/SmoothScroll.min.js" %}></script>
+    <script type="text/javascript" src={% static "js/modernizr.custom.js" %}></script>
+{%  endblock head %}
+{% block body %}
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -485,7 +510,9 @@
 	</div>
 </section>
 <!-- /Blog -->
-    <!-- js files -->
+
+{% block js %}
+<!-- js files -->
 <script src={% static "js/jquery.min.js" %}></script>
 <script src={% static "js/bootstrap.min.js" %}></script>
 <script src={% static "js/classie.js" %}></script>
@@ -525,4 +552,5 @@ $(window).scroll(function() {
 });
 </script>
 <!-- /js files -->
+{% endblock js %}
 {% endblock body %}
