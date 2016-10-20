@@ -1,61 +1,62 @@
 {% extends 'base.html' %}
-    {% block title %}
-        <title>ТОВ "Агрохолдинг 2012"</title>
-    {% endblock title %}
 {% block head %}
+<head>
     {% load staticfiles %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Агрохолдинг 2012, агрохолдинг, аграрії, паї, земля" />
-    <!-- css links -->
-    <link href={% static "css/bootstrap.min.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/font-awesome.min.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/typo.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/hoverex-all.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/inner.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/caption-hover.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/circle-hover.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/slider.css" %} rel="stylesheet" type="text/css" media="all" />
-    <link href={% static "css/style.css" %} rel="stylesheet" type="text/css" media="all" />
-    <!-- /css links -->
-    <!-- font files -->
-    <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-    <!-- font files -->
-    <!-- js files  -->
-    <script src={% static "js/SmoothScroll.min.js" %}></script>
-    <script type="text/javascript" src={% static "js/modernizr.custom.js" %}></script>
-{%  endblock head %}
+<title>ТОВ "Агрохолдинг 2012"</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Агрохолдинг 2012, агрохолдинг, аграрії, паї, земля" />
+<!-- css links -->
+<link href={% static "css/bootstrap.min.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/font-awesome.min.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/typo.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/hoverex-all.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/inner.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/caption-hover.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/circle-hover.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/slider.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/style.css" %} rel="stylesheet" type="text/css" media="all" />
+<!-- /css links -->
+<!-- font files -->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<!-- font files -->
+<!-- js files  -->
+<script src={% static "js/SmoothScroll.min.js" %}></script>
+<script type="text/javascript" src={% static "js/modernizr.custom.js" %}></script>
+<!-- /js files -->
+</head>
+{% endblock head %}
 {% block body %}
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-        <!--<object data="images/AGROHOLDING_2012_logo.svg"-->
-                <!--type="image/svg+xml" width="240" href="index.html"></object>-->
-        <a href="/"><img src={% static "images/AGROHOLDING_2012_logo.svg" %} width="240"></a>
-      <!--<a class="navbar-brand" href="index.html" >Агрохолдинг 2012</a>-->
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/">Головна</a></li>
-            <li><a href="/about/">Про нас</a></li>
-            <li><a href="blog.html">Новини</a></li>
-            <li><a href="gallery.html">Галерея</a></li>
-            <li><a href="typo.html">Корисна інформація</a></li>
-            <li><a href="contact.html">Контакти</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</nav>
-<!-- /Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Мобільна навігація</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+			<!--<object data="images/AGROHOLDING_2012_logo.svg"-->
+					<!--type="image/svg+xml" width="240" href="index.html"></object>-->
+            <a href="/"><img src={% static "images/AGROHOLDING_2012_logo.svg" %} width="240"></a>
+          <!--<a class="navbar-brand" href="index.html" >Агрохолдинг 2012</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="/">Головна</a></li>
+				<li><a href="/about/">Про нас</a></li>
+				<li><a href="blog.html">Новини</a></li>
+				<li><a href="gallery.html">Галерея</a></li>
+				<li><a href="typo.html">Корисна інформація</a></li>
+				<li><a href="contact.html">Контакти</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<!-- /Fixed navbar -->	
 <div class="banner">
 	<div id="content">
         <div id="slider">
@@ -64,7 +65,7 @@
 			<img src={% static "images_agroholding/banner_agro3.jpg" %} alt="Господарство" data-url="#3">
 			<img src={% static "images/banner4.jpg" %} alt="Цілі" data-url="#4">
 		</div>
-	</div>
+	</div>	
 </div>
 <div class="w3ls"></div>
 <div class="content-section-a">
@@ -91,7 +92,7 @@
 							</figcaption>
 						</figure>
 					</li>
-				</ul>
+				</ul> 
 			</div>
         </div>
 	</div>
@@ -141,7 +142,7 @@
                 <ul class="grid cs-style">
 					<li>
 						<figure>
-							<img src={% static "images/farm3.jpg" %} alt="" class="img-responsive">
+							<img src={% static "images_agroholding/farm_agro1.jpg" %} alt="" class="img-responsive">
 							<figcaption>
 								<h3>Наші умови</h3>
 								<p>Умови співпраці</p>
@@ -160,14 +161,14 @@
     <h3 class="text-center slideanim">Наші технології</h3>
 	<ul class="ch-grid">
 		<li>
-			<div class="ch-item ch-img-1 slideanim">
+			<div class="ch-item ch-img-1 slideanim">				
 				<div class="ch-info-wrap">
 					<div class="ch-info">
 						<div class="ch-info-front ch-img-1"></div>
 						<div class="ch-info-back">
 							<h5>Найкраще насіння</h5>
 							<p>Використання найкращого насіння - запорука успіху</p>
-						</div>
+						</div>	
 					</div>
 				</div>
 			</div>
@@ -181,15 +182,15 @@
 					<div class="ch-info">
 						<div class="ch-info-front ch-img-2"></div>
 						<div class="ch-info-back">
-							<h5>Irrigation</h5>
-							<p>Advanced Irrigation Techniques</p>
+							<h5>Оприскування</h5>
+							<p>Ми використовуємо лише найкращє</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<h4 class="slideanim">Irrigation</h4>
-			<p class="slideanim">Using Advanced Irrigation Techniques</p>
-			<a class="btn btn-lg btn-outline slideanim" href="gallery-item.html" role="button">View details &raquo;</a>
+			<h4 class="slideanim">Оприскування</h4>
+			<p class="slideanim">Використання найкращих препаратів</p>
+			<a class="btn btn-lg btn-outline slideanim" href="gallery-item.html" role="button">Детальніше &raquo;</a>
 		</li>
 		<li>
 			<div class="ch-item ch-img-3 slideanim">
@@ -197,15 +198,15 @@
 					<div class="ch-info">
 						<div class="ch-info-front ch-img-3"></div>
 						<div class="ch-info-back">
-							<h5>Tools-Machinery</h5>
-							<p>Using Advanced Tools & Machinery</p>
+							<h5>Техніка</h5>
+							<p>Якість обробки землі залежить від якості техніки</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<h4 class="slideanim">Tools-Machinery</h4>
-			<p class="slideanim">Using Advanced Tools & Machinery</p>
-			<a class="btn btn-lg btn-outline slideanim" href="gallery-item.html" role="button">View details &raquo;</a>
+			<h4 class="slideanim">Техніка</h4>
+			<p class="slideanim">Надаємо перевагу найкращій техніці</p>
+			<a class="btn btn-lg btn-outline slideanim" href="gallery-item.html" role="button">Детальніше &raquo;</a>
 		</li>
 		<li>
 			<div class="ch-item ch-img-4 slideanim">
@@ -213,22 +214,22 @@
 					<div class="ch-info">
 						<div class="ch-info-front ch-img-4"></div>
 						<div class="ch-info-back">
-							<h5>End Of Harvest</h5>
-							<p>Advanced Harvesting Techniques</p>
+							<h5>Врожай</h5>
+							<p>Якісний підхід, якісний врожай</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<h4 class="slideanim">End Of Harvest</h4>
-			<p class="slideanim">Using Advanced Harvesting Techniques</p>
-			<a class="btn btn-lg btn-outline slideanim" href="gallery-item.html" role="button">View details &raquo;</a>
+			<h4 class="slideanim">Врожай</h4>
+			<p class="slideanim">Якісний підхід, якісний врожай</p>
+			<a class="btn btn-lg btn-outline slideanim" href="gallery-item.html" role="button">Детальніше &raquo;</a>
 		</li>
 	</ul>
 </section>
 <!-- /Services -->
 <!-- Portfolio Grid Section -->
 <section id="portfolio">
-	<h3 class="text-center slideanim">Our Portfolio</h3>
+	<h3 class="text-center slideanim">Робота</h3>
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -238,7 +239,7 @@
 							<i class="fa fa-paper-plane"></i>
 						</div>
 					</div>
-					<img src="images/port1.jpg" class="img-responsive" alt="">
+					<img src={% static "images/port1.jpg" %} class="img-responsive" alt="">
 				</a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -248,7 +249,7 @@
 							<i class="fa fa-paper-plane"></i>
                         </div>
 					</div>
-                    <img src="images/port2.jpg" class="img-responsive" alt="">
+                    <img src={% static "images/port2.jpg" %} class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -258,7 +259,7 @@
                             <i class="fa fa-paper-plane"></i>
                         </div>
                     </div>
-                    <img src="images/port3.jpg" class="img-responsive" alt="">
+                    <img src={% static "images/port3.jpg" %} class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -268,7 +269,7 @@
                             <i class="fa fa-paper-plane"></i>
                         </div>
                     </div>
-                    <img src="images/port4.jpg" class="img-responsive" alt="">
+                    <img src={% static "images/port4.jpg" %} class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -278,7 +279,7 @@
                             <i class="fa fa-paper-plane"></i>
                         </div>
                     </div>
-                    <img src="images/port5.jpg" class="img-responsive" alt="">
+                    <img src={% static "images/port5.jpg" %} class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item slideanim">
@@ -288,7 +289,7 @@
                             <i class="fa fa-paper-plane"></i>
                         </div>
                     </div>
-					<img src="images/port6.jpg" class="img-responsive" alt="">
+					<img src={% static "images/port6.jpg" %} class="img-responsive" alt="">
                 </a>
             </div>
         </div>
@@ -307,10 +308,10 @@
 			<div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <h3>Vegetable Farm</h3>
+                        <h3>Агрохолдинг</h3>
 						<hr>
-                        <img src="images/port1.jpg" class="img-responsive img-centered" alt="">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <img src={% static "images/port1.jpg" %} class="img-responsive img-centered" alt="">
+                        <p>Відбір лише найкращого насіння призводить до успіху. Так вважають наші агрономи, а ми їх в цьому підтримуємо</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
                 </div>
@@ -331,7 +332,7 @@
                     <div class="modal-body">
                         <h3>Vegetable Farm</h3>
                         <hr>
-                        <img src="images/port2.jpg" class="img-responsive img-centered" alt="">
+                        <img src={% static "images/port2.jpg" %} class="img-responsive img-centered" alt="">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
@@ -353,7 +354,7 @@
                     <div class="modal-body">
                         <h3>Vegetable Farm</h3>
                         <hr>
-                        <img src="images/port3.jpg" class="img-responsive img-centered" alt="">
+                        <img src={% static "images/port3.jpg" %} class="img-responsive img-centered" alt="">
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                     </div>
@@ -431,38 +432,38 @@
 <!-- /Portfolio Modals -->
 <!-- Blog -->
 <section class="our-blog" id="blog">
-	<h3 class="text-center slideanim">Our News Updates</h3>
+	<h3 class="text-center slideanim">Останні новини</h3>
     <div class="container">
 		<div class="row">
 			<div class="col-md-3 col-xs-12">
 				<div class="news-w3ls">
 					<div class="view view-seventh slideanim">
-						<img src="images/blog1.jpg" alt="" class="img-responsive"/>
+						<img src={% static "images/blog1.jpg" %} alt="" class="img-responsive"/>
 						<div class="mask">
-							<h5>January 2,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<a href="blog.html" class="info">Read More</a>
+							<h5>20 жовтня,2016</h5>
+							<p>Закінчено посівну озимих культур</p>
+							<a href="blog.html" class="info">Детальніше</a>
 						</div>
 					</div>
 				</div>
 				<div class="blog-content slideanim">
-					<p class="p1">News - January 2,2016</p>
-					<a href="blog.html"><h4>Its The Vegetable Farm You Can See.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+					<p class="p1">Новини - 20 жовтня,2016</p>
+					<a href="blog.html"><h4>Закінчено посівну озимих культур</h4></a>
+					<p class="p2">15 жовтня ми закінчили посівну озимих культур, як завжди витримавши всі терміни</p>
 					<a href="blog.html">Read More</a>
 				</div>
 			</div>
 			<div class="col-md-3 col-xs-12">
 				<div class="news-w3ls">
 					<div class="view view-seventh slideanim">
-						<img src="images/blog2.jpg" alt="" class="img-responsive"/>
+						<img src={% static "images/blog2.jpg" %} alt="" class="img-responsive"/>
 						<div class="mask">
 							<h5>January 10,2016</h5>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 							<a href="blog.html" class="info">Read More</a>
 						</div>
 					</div>
-				</div>
+				</div>	
 				<div class="blog-content slideanim">
 					<p class="p1">News - January 10,2016</p>
 					<a href="blog.html"><h4>A Day With Vegetable Farm.</h4></a>
@@ -473,14 +474,14 @@
 			<div class="col-md-3 col-xs-12">
 				<div class="news-w3ls">
 					<div class="view view-seventh slideanim">
-						<img src="images/blog3.jpg" alt="" class="img-responsive"/>
+						<img src={% static "images/blog3.jpg" %} alt="" class="img-responsive"/>
 						<div class="mask">
 							<h5>January 15,2016</h5>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 							<a href="blog.html" class="info">Read More</a>
 						</div>
 					</div>
-				</div>
+				</div>	
 				<div class="blog-content slideanim">
 					<p class="p1">News - January 15,2016</p>
 					<a href="blog.html"><h4>Vegetable Farm For All.</h4></a>
@@ -491,14 +492,14 @@
 			<div class="col-md-3 col-xs-12">
 				<div class="news-w3ls">
 					<div class="view view-seventh slideanim">
-						<img src="images/blog4.jpg" alt="" class="img-responsive"/>
+						<img src={% static "images/blog4.jpg" %} alt="" class="img-responsive"/>
 						<div class="mask">
 							<h5>January 20,2016</h5>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 							<a href="blog.html" class="info">Read More</a>
 						</div>
 					</div>
-				</div>
+				</div>	
 				<div class="blog-content slideanim">
 					<p class="p1">News - January 20,2016</p>
 					<a href="blog.html"><h4>Vegetable Farm For Your Life.</h4></a>
@@ -510,7 +511,8 @@
 	</div>
 </section>
 <!-- /Blog -->
-
+{% endblock body %}
+<!-- Footer -->
 {% block js %}
 <!-- js files -->
 <script src={% static "js/jquery.min.js" %}></script>
@@ -553,4 +555,5 @@ $(window).scroll(function() {
 </script>
 <!-- /js files -->
 {% endblock js %}
-{% endblock body %}
+</body>
+</html>
