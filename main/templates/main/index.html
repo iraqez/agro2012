@@ -41,17 +41,17 @@
           </button>
 			<!--<object data="images/AGROHOLDING_2012_logo.svg"-->
 					<!--type="image/svg+xml" width="240" href="index.html"></object>-->
-            <a href="/"><img src={% static "images/AGROHOLDING_2012_logo.svg" %} width="240"></a>
+            <a href="{% url 'main' %}"><img src={% static "images/AGROHOLDING_2012_logo.svg" %} width="240"></a>
           <!--<a class="navbar-brand" href="index.html" >Агрохолдинг 2012</a>-->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="/">Головна</a></li>
-				<li><a href="/about/">Про нас</a></li>
-				<li><a href="blog.html">Новини</a></li>
-				<li><a href="gallery.html">Галерея</a></li>
-				<li><a href="typo.html">Аренда землі</a></li>
-				<li><a href="contact.html">Контакти</a></li>
+				<li class="active"><a href="{% url 'main' %}">Головна</a></li>
+				<li><a href="{% url 'about' %}">Про нас</a></li>
+				<li><a href="{% url 'main' %}">Новини</a></li>
+				<li><a href="{% url 'main' %}">Галерея</a></li>
+				<li><a href="{% url 'main' %}">Аренда землі</a></li>
+				<li><a href="{% url 'main' %}">Контакти</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
