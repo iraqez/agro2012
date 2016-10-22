@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% block head %}
+<head>
+        {% load staticfiles %}
+<title>ТОВ "Агрохолдинг 2012"</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Vegetable Farm Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!-- css links -->
+<link href={% static "css/bootstrap.min.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/font-awesome.min.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/typo.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/hoverex-all.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/inner.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/pogo-slider.min.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/caption-hover.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/circle-hover.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/slider.css" %} rel="stylesheet" type="text/css" media="all" />
+<link href={% static "css/style.css" %} rel="stylesheet" type="text/css" media="all" />
+<!-- /css links -->
+<!-- font files -->
+<link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+<!-- font files -->
+<!-- js files  -->
+<script src={% static "js/SmoothScroll.min.js" %}></script>
+<script type="text/javascript" src={% static "js/modernizr.custom.js" %}></script>
+<!-- /js files -->
+</head>
+{% endblock head %}
+{% block body %}
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Мобільна навігація</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+{#          <a class="navbar-brand" href="index.html">Vegetable Farm</a>#}
+            <a href="{% url 'main' %}"><img src={% static "images/AGROHOLDING_2012_logo.svg" %} width="240"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{% url 'main' %}">Головна</a></li>
+				<li><a href="{% url 'about' %}">Про нас</a></li>
+				<li class="active"><a href="{% url 'news' %}">Новини</a></li>
+				<li><a href="{% url 'main' %}">Галерея</a></li>
+				<li><a href="{% url 'main' %}">Аренда землі</a></li>
+				<li><a href="{% url 'main' %}">Контакти</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<!-- /Fixed navbar -->
+<!-- banner section -->
+{% include 'baner_not_index.html' %}
+<!-- /banner section -->
+<!-- blog content -->
+<section class="blog-w3ls">
+	<div class="container">
+		<h3 class="text-center slideanim">Наші новини</h3>
+		<p class="text-center slideanim">Всі події ТОВ "Агрохолдинг 2012"</p>
+		<div class="row">
+			<!-- BLOG POSTS LIST -->
+			<div class="col-lg-8 slideanim">
+				<!-- Blog Post 1 -->
+				<a href="blogpost.html">
+					<div class="hover01 column">
+						<div>
+							<figure><img class="img-responsive" src={% static "images/blog-img1.jpg" %} alt="Vegetable Farm" title="Vegetable Farm"></figure>
+						</div>
+					</div>
+				</a>
+				<a href="blogpost.html" class="blog-link"><h3 class="ctitle">Закінчення посіву озимих культур</h3></a>
+				<p class="blog-p1"><small>Додано: 20 жовтня,2016.</small> | By: Admin - 3 Comments</p>
+				<p class="blog-p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<p class="blog-p3"><a href="blogpost.html" class="btn-outline">Read More</a></p>
+				<div class="hline"></div>
+				<div class="spacing"></div>
+
+				<!-- Blog Post 2 -->
+				<a href="blogpost.html">
+					<div class="hover01 column">
+						<div>
+							<figure><img class="img-responsive" src={% static "images/blog-img2.jpg" %} alt="Vegetable Farm" title="Vegetable Farm"></figure>
+						</div>
+					</div>
+				</a>
+				<a href="blogpost.html" class="blog-link"><h3 class="ctitle">Vegetable Farm, You'll Love it.</h3></a>
+				<p class="blog-p1"><small>Додано: 20 жовтня,2016.</small> | By: Admin - 3 Comments</p>
+				<p class="blog-p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<p class="blog-p3"><a href="blogpost.html" class="btn-outline">Read More</a></p>
+				<div class="hline"></div>
+				<div class="spacing"></div>
+
+				<!-- Blog Post 3 -->
+				<a href="blogpost.html">
+					<div class="hover01 column">
+						<div>
+							<figure><img class="img-responsive" src={% static "images/blog-img3.jpg" %} alt="Vegetable Farm" title="Vegetable Farm"></figure>
+						</div>
+					</div>
+				</a>
+				<a href="blogpost.html" class="blog-link"><h3 class="ctitle">Vegetable Farm, New & Improved.</h3></a>
+				<p class="blog-p1"><small>Додано: 20 жовтня,2016.</small> | By: Admin - 3 Comments</p>
+				<p class="blog-p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<p class="blog-p3"><a href="blogpost.html" class="btn-outline">Read More</a></p>
+				<div class="hline"></div>
+			</div><!-- /col-lg-8 -->
+
+			<!-- SIDEBAR -->
+			<div class="col-lg-4 slideanim">
+				<h4>Пошук</h4>
+				<div class="hline"></div>
+				<form action="#" method="post">
+					<div class="input-group">
+						<input type="text" class="form-control" id="search" name="search" placeholder="Введіть для пошуку" required/>
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+				</form>
+				<div class="spacing"></div>
+				<h4>Категорії</h4>
+				<div class="hline"></div>
+				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Паї</a> <span class="badge badge-theme pull-right">9</span></p>
+				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Посівна</a> <span class="badge badge-theme pull-right">3</span></p>
+				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Допомога в селах</a> <span class="badge badge-theme pull-right">11</span></p>
+				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Сільгосптехнології</a> <span class="badge badge-theme pull-right">5</span></p>
+				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Техніка</a> <span class="badge badge-theme pull-right">7</span></p>
+				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Фермерство</a> <span class="badge badge-theme pull-right">12</span></p>
+				<div class="spacing"></div>
+				<h4>Останні новини</h4>
+				<div class="hline"></div>
+				<ul class="popular-posts">
+					<li>
+						<a href="blogpost.html">
+							<img src={% static "images/blog-small1.jpg" %} alt="Popular Post">
+						</a>
+						<p class="blog-p5"><a href="blogpost.html">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
+						<em>Posted on 08/21/16</em>
+					</li>
+					<li>
+						<a href="blogpost.html">
+							<img src={% static "images/blog-small2.jpg" %} alt="Popular Post">
+						</a>
+						<p class="blog-p5"><a href="blogpost.html">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
+						<em>Posted on 09/01/16</em>
+					</li>
+					<li>
+						<a href="blogpost.html">
+							<img src={% static "images/blog-small3.jpg" %} alt="Popular Post">
+						</a>
+						<p class="blog-p5"><a href="blogpost.html">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
+						<em>Posted on 9/16/16</em>
+					</li>
+					<li>
+						<a href="blogpost.html">
+							<img src="images/blog-small4.jpg" alt="Popular Post">
+						</a>
+						<p class="blog-p5"><a href="blogpost.html">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></p>
+						<em>Posted on 10/16/16</em>
+					</li>
+				</ul>
+				<div class="spacing"></div>
+				<h4>Popular Tags</h4>
+				<div class="hline"></div>
+				<p class="blog-p6">
+					<a class="btn btn-theme" href="#" role="button">Fertilizers</a>
+					<a class="btn btn-theme" href="#" role="button">Crop Rotation</a>
+					<a class="btn btn-theme" href="#" role="button">Weed Removal</a>
+					<a class="btn btn-theme" href="#" role="button">Breeding</a>
+					<a class="btn btn-theme" href="#" role="button">Fencing</a>
+					<a class="btn btn-theme" href="#" role="button">Ranching</a>
+					<a class="btn btn-theme" href="#" role="button">Arboriculture</a>
+					<a class="btn btn-theme" href="#" role="button">Turf management</a>
+					<a class="btn btn-theme" href="#" role="button">Floriculture</a>
+					<a class="btn btn-theme" href="#" role="button">Landscape horticulture</a>
+					<a class="btn btn-theme" href="#" role="button">Olericulture</a>
+					<a class="btn btn-theme" href="#" role="button">Pomology</a>
+					<a class="btn btn-theme" href="#" role="button">Viticulture</a>
+					<a class="btn btn-theme" href="#" role="button">Oenology</a>
+				</p>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
+</section>
+{% endblock body %}
+<!-- Footer -->
+{% block js %}
+    {% load staticfiles %}
+<!-- js files -->
+<script src={% static "js/jquery.min.js" %}></script>
+<script src={% static "js/bootstrap.min.js" %}></script>
+<script src={% static "js/classie.js" %}></script>
+<script src={% static "js/TweenMax.min.js" %}></script>
+<script src={% static "js/index2.js" %}></script>
+<script src={% static "js/jquery.pogo-slider.min.js" %}></script>
+<script src={% static "js/main2.js" %}></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+  // Store hash
+  var hash = this.hash;
+
+  // Using jQuery's animate() method to add smooth page scroll
+  // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 900, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+    window.location.hash = hash;
+    });
+  });
+})
+</script>
+<script>
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+</script>
+
+<script src={% static "js/retina-1.1.0.js" %}></script>
+<script src={% static "js/jquery.hoverdir.js" %}></script>
+<script src={% static "js/jquery.hoverex.min.js" %}></script>
+<script src={% static "js/jquery.isotope.min.js" %}></script>
+<!-- /js files -->
+{% endblock js %}
+</body>
+</html>
