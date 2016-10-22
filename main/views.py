@@ -8,3 +8,6 @@ class AboutView(generic.TemplateView):
 
 class NewsView(generic.TemplateView):
     template_name = 'main/news.html'
+
+class ContactView(generic.TemplateView):
+    template_name = 'main/contact.html'
