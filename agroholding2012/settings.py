@@ -23,9 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qt++fg*-!xkrgj=u&y#onfom_4uczz-+^$5x@=vo$w&9jxd02-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'agro2012.com.ua',
+    'www.agro2012.com.ua',
+]
 
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '.'))
 
@@ -39,6 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'employees',
+    'easy_thumbnails',
+    'sorl.thumbnail',
+    'image_cropping',
 ]
 
 MIDDLEWARE = [
@@ -106,9 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uk-ua'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
@@ -116,6 +126,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+#обрезка фото
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
