@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'sorl.thumbnail',
     'image_cropping',
+    'office',
 ]
 
 IMAGE_CROPPING_SIZE_WARNING = True

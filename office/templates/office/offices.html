@@ -1,0 +1,21 @@
+{% extends 'main/contact.html' %}
+{% block offices %}
+<section class="contact-us" id="contact">
+	<h3 class="text-center slideanim">Наші контакти</h3>
+	<p class="text-center slideanim">Контакти головного, та регіональних офісів ТОВ "Агрохолдинг 2012"</p>
+	<div class="container">
+		<div class="row">
+            {% for office in object_list %}
+                <div class="col-md-4 slideanim">
+				    <h4>{{ office }} :</h4>
+                    <p><b>Телефон</b> : {{ office.phone }}</p>
+                    <p><b>Email</b> : <a href="{{ office.email }}">{{ office.email }}</a></p>
+                    <p><b>Адреса</b> : {{ office.post_index }}, {{ office.country_name }}, {{ office.get_type_sity_display }} {{ office.sity_office }}, вул. {{ office.street }}, {{ office.building }}
+                    </p>
+                </div>
+            {% endfor %}
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+{% endblock offices %}

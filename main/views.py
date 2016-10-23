@@ -1,4 +1,5 @@
 from django.views import generic
+from office.models import Office
 
 class MainView(generic.TemplateView):
     template_name = 'main/index.html'
@@ -11,3 +12,4 @@ class NewsView(generic.TemplateView):
 
 class ContactView(generic.TemplateView):
     template_name = 'main/contact.html'
+
