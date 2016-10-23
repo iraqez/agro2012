@@ -1,9 +1,9 @@
 from django.contrib import admin
 from image_cropping import ImageCroppingMixin
-from .models import MyModel
+from .models import Image
 
 
-class MyModelAdmin(ImageCroppingMixin, admin.ModelAdmin):
+class ImageAdmin(ImageCroppingMixin, admin.ModelAdmin):
     pass
 
-admin.site.register(MyModel, MyModelAdmin)
+admin.site.register(Image, ImageAdmin)

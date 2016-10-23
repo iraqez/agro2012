@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'image_cropping',
 ]
 
+IMAGE_CROPPING_SIZE_WARNING = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -145,4 +147,9 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+IMAGE_CROPPING_THUMB_SIZE = (600, 600)
+IMAGE_CROPPING_JQUERY_URL = 'js/jquery.min.js'
+THUMBNAIL_DEBUG = True
+HEADLESS = True
 
