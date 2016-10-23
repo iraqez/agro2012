@@ -137,9 +137,12 @@ THUMBNAIL_PROCESSORS = (
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static',),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '../media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
