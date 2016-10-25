@@ -44,12 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_resized',
     'main',
     'employees',
     'easy_thumbnails',
     'sorl.thumbnail',
     'image_cropping',
     'office',
+    'news',
 ]
 
 IMAGE_CROPPING_SIZE_WARNING = True
