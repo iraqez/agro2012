@@ -9,5 +9,5 @@ setup(
     license='',
     author='v.gumenyuk',
     author_email='',
-    description=''
+    description='',
 )

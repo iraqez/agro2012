@@ -3,10 +3,10 @@
 from django.db import models
 from datetime import datetime
 from django_resized import ResizedImageField
-from sorl.thumbnail import get_thumbnail
+from sorl.thumbnail import ImageField
 
 class New(models.Model):
-    image = models.ImageField(size=[850, 850], upload_to='news', verbose_name='Фото')
+    image = ImageField(upload_to='news', verbose_name='Фото')
     title = models.CharField(max_length=150, unique_for_date='posted', verbose_name='Заголовок')
     content = models.TextField(verbose_name='Зміст')
     posted = models.DateTimeField(default=datetime.now(), db_index=True, verbose_name='Опублікована')
