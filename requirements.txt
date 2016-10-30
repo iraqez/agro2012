@@ -5,4 +5,4 @@ django-resized==0.3.5
 easy-thumbnails==2.3
 Pillow==3.4.2
 six==1.10.0
-sorl-thumbnail==12.3
+sorl-thumbnail==12.4a1

@@ -1,0 +1,26 @@
+{% extends 'news/content.html' %}
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% block list %}
+    			<div class="col-lg-8 slideanim">
+            {% for news in object_list %}
+				<!-- Blog Post 1 -->
+				<a href="{{ news.get_absolute_url }}">
+					<div class="hover01 column">
+						<div>
+                            {% thumbnail news.image '850x400' crop="center" as im %}
+							<figure><img class="img-responsive" src="{{ im.url }}" alt="{{ news.slug }}" title="{{ news.title }}"></figure>
+						    {% endthumbnail %}
+                        </div>
+					</div>
+				</a>
+				<a href="{{ news.get_absolute_url }}" class="blog-link"><h3 class="ctitle">{{ news.title }}</h3></a>
+				<p class="blog-p1"><small>Додано: {{ news.posted }}</small> | 3 коментаря</p>
+				<p class="blog-p2">{{ news.content }}</p>
+				<p class="blog-p3"><a href="{{ news.get_absolute_url }}" class="btn-outline">більше</a></p>
+				<div class="hline"></div>
+				<div class="spacing"></div>
+            {% endfor %}
+			</div><!-- /col-lg-8 -->
+{% endblock list %}
