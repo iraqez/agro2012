@@ -25,9 +25,8 @@
 				<div class="spacing"></div>
 				<h4>Категорії</h4>
 				<div class="hline"></div>
-                {% for cat in category %}
-                    <p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> {{ cat.name }}</a> <span class="badge badge-theme pull-right">9</span></p>
-                {% endfor %}
+            {% block category %}
+            {% endblock category %}
 {#				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Паї</a> <span class="badge badge-theme pull-right">9</span></p>#}
 {#				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Посівна</a> <span class="badge badge-theme pull-right">3</span></p>#}
 {#				<p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> Допомога в селах</a> <span class="badge badge-theme pull-right">11</span></p>#}

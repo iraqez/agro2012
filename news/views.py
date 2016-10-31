@@ -14,6 +14,6 @@ class NewsDetailView(generic.DetailView):
 
 class CategoryListView(generic.ListView):
     model = Category
-    template_name = 'news/content.html'
+    template_name = 'news/list.html'
     context_object_name = 'category'
     queryset = Category.objects.all()

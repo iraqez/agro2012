@@ -24,3 +24,8 @@
             {% endfor %}
 			</div><!-- /col-lg-8 -->
 {% endblock list %}
+{% block category %}
+    {% for cat in category %}
+        <p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> {{ cat.name }}</a> <span class="badge badge-theme pull-right">9</span></p>
+    {% endfor %}
+{% endblock category %}
