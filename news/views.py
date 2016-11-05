@@ -14,6 +14,9 @@ class NewsDetailView(generic.DetailView):
 
 class CategoryListView(generic.ListView):
     model = Category
-    template_name = 'news/list.html'
-    context_object_name = 'category'
-    queryset = Category.objects.all()
+    template_name = 'news/content.html'
+    category = Category.objects.all()
+    def get_context_data(self, **kwargs):
+        context = super(CategoryListView, self).get_context_data(**kwargs)
+        context["category"] = self.category
+        return context
