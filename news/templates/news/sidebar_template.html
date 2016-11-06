@@ -1,0 +1,47 @@
+{% load staticfiles %}
+{% load thumbnail %}
+
+<!-- SIDEBAR -->
+<div class="col-lg-4 slideanim">
+    <h4>Пошук</h4>
+    <div class="hline"></div>
+    <form action="#" method="post">
+        <div class="input-group">
+            <input type="text" class="form-control" id="search" name="search" placeholder="Введіть для пошуку" required/>
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="spacing"></div>
+    <h4>Категорії</h4>
+    <div class="hline"></div>
+    {% for cats in categories %}
+        <p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> {{ cats.name }}</a> <span class="badge badge-theme pull-right">9</span></p>
+    {% endfor %}
+    <div class="spacing"></div>
+    <h4>Останні новини</h4>
+    <div class="hline"></div>
+    <ul class="popular-posts">
+    {% for new in new_posts %}
+        <li>
+            <a href="#">
+                {% thumbnail new.image '70x70' crop="center" as im %}
+                <img src="{{ im.url }}" alt="{{ new.title }}">
+                {% endthumbnail %}
+            </a>
+            <p class="blog-p5"><a href="#">{{ new.title }}</a></p>
+            <em>{{ new.posted }}</em>
+        </li>
+    {% endfor %}
+    </ul>
+    <div class="spacing"></div>
+    <h4>Теги</h4>
+    <div class="hline"></div>
+    <p class="blog-p6">
+     {% for tag in tags %}
+        <a class="btn btn-theme" href="#" role="button">{{ tag.name }}</a>
+     {% endfor %}
+    </p>
+</div>
+<!-- //SIDEBAR -->
