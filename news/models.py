@@ -2,9 +2,11 @@ from django.db import models
 from datetime import datetime
 from django_resized import ResizedImageField
 from sorl.thumbnail import get_thumbnail
+from autoslug import AutoSlugField
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='Назва категорії')
+    slug = AutoSlugField(unique=True, verbose_name='Адресна строка')
     def __str__(self):
         return self.name
     class Meta:
@@ -13,6 +15,7 @@ class Category(models.Model):
 
 class Tag(models.Model):
     name = models.CharField(max_length=50, verbose_name="Назва тегу")
+    slug = AutoSlugField(unique=True, verbose_name='Адресна строка')
     def __str__(self):
         return self.name
     class Meta:
@@ -22,7 +25,7 @@ class Tag(models.Model):
 class New(models.Model):
     image = ResizedImageField(size=[850, 850], upload_to='news', verbose_name='Фото')
     title = models.CharField(max_length=150, unique_for_date='posted', verbose_name='Заголовок')
-    slug = models.SlugField(unique=True, verbose_name='Адресна строка')
+    slug = AutoSlugField(unique=True, verbose_name='Адресна строка')
     content = models.TextField(verbose_name='Зміст')
     category = models.ForeignKey(Category, verbose_name='Оберіть категорію')
     tag = models.ManyToManyField(Tag, verbose_name='Оберіть теги для статті')

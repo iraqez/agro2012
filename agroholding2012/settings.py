@@ -38,6 +38,7 @@ PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '.'))
 # Application definition
 
 INSTALLED_APPS = [
+#    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -158,6 +159,15 @@ IMAGE_CROPPING_JQUERY_URL = 'js/jquery.min.js'
 THUMBNAIL_DEBUG = True
 HEADLESS = True
 
+import autoslug
+# using as many characters as needed to make a natural replacement
+AUTOSLUG_SLUGIFY_FUNCTION = 'autoslug.utils.translit_long'
+
+# using the minimum number of characters to make a replacement
+AUTOSLUG_SLUGIFY_FUNCTION = 'autoslug.utils.translit_short'
+
+# only performing single character replacements
+AUTOSLUG_SLUGIFY_FUNCTION = 'autoslug.utils.translit_one'
 # TEMPLATE_CONTEXT_PROCESSORS = (
 #
 # )
