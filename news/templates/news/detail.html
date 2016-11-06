@@ -14,7 +14,7 @@
 
 					<div class="hover01 column">
 						<div>
-                            {% thumbnail new.image '850x400' crop="center" as im %}
+                            {% thumbnail new.image '850x400' as im %}
 							<figure><img class="img-responsive" src="{{ im.url }}" alt="{{ new.title }}"></figure>
                             {% endthumbnail %}
 						</div>
