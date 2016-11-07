@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django_cleanup',
 
     'main',
-    'employees',
+    # 'employees',
     'office',
     'news',
 ]
