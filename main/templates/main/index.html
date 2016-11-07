@@ -431,85 +431,8 @@
 </div>
 <!-- /Portfolio Modals -->
 <!-- Blog -->
-<section class="our-blog" id="blog">
-	<h3 class="text-center slideanim">Останні новини</h3>
-    <div class="container">
-		<div class="row">
-			<div class="col-md-3 col-xs-12">
-				<div class="news-w3ls">
-					<div class="view view-seventh slideanim">
-						<img src={% static "images/blog1.jpg" %} alt="" class="img-responsive"/>
-						<div class="mask">
-							<h5>20 жовтня,2016</h5>
-							<p>Закінчено посівну озимих культур</p>
-							<a href="blog.html" class="info">Детальніше</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-content slideanim">
-					<p class="p1">Новини - 20 жовтня,2016</p>
-					<a href="blog.html"><h4>Закінчено посівну озимих культур</h4></a>
-					<p class="p2">15 жовтня ми закінчили посівну озимих культур, як завжди витримавши всі терміни</p>
-					<a href="blog.html">Read More</a>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="news-w3ls">
-					<div class="view view-seventh slideanim">
-						<img src={% static "images/blog2.jpg" %} alt="" class="img-responsive"/>
-						<div class="mask">
-							<h5>January 10,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<a href="blog.html" class="info">Read More</a>
-						</div>
-					</div>
-				</div>	
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 10,2016</p>
-					<a href="blog.html"><h4>A Day With Vegetable Farm.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<a href="blog.html">Read More</a>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="news-w3ls">
-					<div class="view view-seventh slideanim">
-						<img src={% static "images/blog3.jpg" %} alt="" class="img-responsive"/>
-						<div class="mask">
-							<h5>January 15,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<a href="blog.html" class="info">Read More</a>
-						</div>
-					</div>
-				</div>	
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 15,2016</p>
-					<a href="blog.html"><h4>Vegetable Farm For All.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<a href="blog.html">Read More</a>
-				</div>
-			</div>
-			<div class="col-md-3 col-xs-12">
-				<div class="news-w3ls">
-					<div class="view view-seventh slideanim">
-						<img src={% static "images/blog4.jpg" %} alt="" class="img-responsive"/>
-						<div class="mask">
-							<h5>January 20,2016</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<a href="blog.html" class="info">Read More</a>
-						</div>
-					</div>
-				</div>	
-				<div class="blog-content slideanim">
-					<p class="p1">News - January 20,2016</p>
-					<a href="blog.html"><h4>Vegetable Farm For Your Life.</h4></a>
-					<p class="p2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<a href="blog.html">Read More</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+{% load news %}
+    {% show_news %}
 <!-- /Blog -->
 {% endblock body %}
 <!-- Footer -->

@@ -1,0 +1,33 @@
+{% load staticfiles %}
+{% load thumbnail %}
+
+<section class="our-blog" id="blog">
+	<h3 class="text-center slideanim">Останні новини</h3>
+    <div class="container">
+		<div class="row">
+    {% for new in new_posts %}
+			<div class="col-md-3 col-xs-12">
+				<div class="news-w3ls">
+					<div class="view view-seventh slideanim">
+                        {% thumbnail new.image '250x250' crop="center" as im %}
+						<img src="{{ im.url }}" alt="" class="img-responsive"/>
+                        {% endthumbnail %}
+						<div class="mask">
+							<h5>{{ new.posted }}</h5>
+							<p>{{ new.title }}</p>
+							<a href="{{ new.get_absolute_url }}" class="info">Детальніше</a>
+						</div>
+					</div>
+				</div>
+				<div class="blog-content slideanim">
+					<p class="p1">{{ new.posted }}</p>
+					<a href="{{ new.get_absolute_url }}"><h4>{{ new.title }}</h4></a>
+					<p class="p2">{{ new.content|truncatechars:100 }}</p>
+					<a href="{{ new.get_absolute_url }}">Більше</a>
+				</div>
+			</div>
+    {% endfor %}
+
+		</div>
+	</div>
+</section>
