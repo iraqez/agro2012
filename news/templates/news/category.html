@@ -6,11 +6,11 @@
     			<div class="col-lg-8 slideanim">
             {% for new in news %}
 				<!-- Blog Post 1 -->
-				<a href="{{ news.get_absolute_url }}">
+				<a href="{{ new.get_absolute_url }}">
 					<div class="hover01 column">
 						<div>
-                            {% thumbnail news.image '850x400' crop="center" as im %}
-							<figure><img class="img-responsive" src="{{ im.url }}" alt="{{ news.slug }}" title="{{ news.title }}"></figure>
+                            {% thumbnail new.image '850x400' crop="center" as im %}
+							<figure><img class="img-responsive" src="{{ im.url }}" alt="{{ new.slug }}" title="{{ new.title }}"></figure>
 						    {% endthumbnail %}
                         </div>
 					</div>

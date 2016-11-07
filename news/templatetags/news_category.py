@@ -9,7 +9,7 @@ def show_sidebar():
     # выбираем все категории
     categories = Category.objects.all().order_by("name")
     # выбираем все статьи по id - для ссылок и title - для списка
-    new_posts = New.objects.values('id','title', 'image', 'posted').order_by("-posted")[:4]
+    new_posts = New.objects.values('id','title', 'image', 'posted', 'slug').order_by("-posted")[:4]
     # возвращаем наши объекты в шаблон
  ##   return {'tags': tags, 'categories': categories, 'new_posts': new_posts}
     return {'tags': tags, 'categories': categories, 'new_posts': new_posts}

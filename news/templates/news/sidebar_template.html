@@ -25,12 +25,12 @@
     <ul class="popular-posts">
     {% for new in new_posts %}
         <li>
-            <a href="#">
+            <a href="{% url 'news' %}{{ new.slug }}">
                 {% thumbnail new.image '70x70' crop="center" as im %}
                 <img src="{{ im.url }}" alt="{{ new.title }}">
                 {% endthumbnail %}
             </a>
-            <p class="blog-p5"><a href="#">{{ new.title }}</a></p>
+            <p class="blog-p5"><a href="{% url 'news' %}{{ new.slug }}">{{ new.title }}</a></p>
             <em>{{ new.posted }}</em>
         </li>
     {% endfor %}
@@ -40,7 +40,7 @@
     <div class="hline"></div>
     <p class="blog-p6">
      {% for tag in tags %}
-        <a class="btn btn-theme" href="#" role="button">{{ tag.name }}</a>
+        <a class="btn btn-theme" href="{% url 'news' %}{{ tag.slug }}" role="button">{{ tag.name }}</a>
      {% endfor %}
     </p>
 </div>
