@@ -1,36 +1,25 @@
 from django.views import generic
-from news.models import New, Category
-
-# class NewsView(generic.TemplateView):
-#     template_name = 'news/list.html'
-
-# class CategoryListView(generic.TemplateView):
-#     template_name = 'news/content.html'
-#     category = Category.objects.all()
-#     def get_context_data(self, **kwargs):
-#         context = super(CategoryListView, self).get_context_data(**kwargs)
-#         context["category"] = self.category
-#         return context
+from news.models import New, Category, Tag
+from django.shortcuts import render
 
 class NewsListView(generic.ListView):
     model = New
     template_name = 'news/list.html'
 
-    # category = Category.objects.all()
-    # def get_context_data(self, **kwargs):
-    #     context = super(NewsListView, self).get_context_data(**kwargs)
-    #     context["category"] = self.category
-    #     return context
-
 class NewsDetailView(generic.DetailView):
     model = New
     template_name = 'news/detail.html'
 
+def category(request, slug): # получаем аргумент id
+    # делаем выборку выбранной категории
+    category = Category.objects.select_related().get(slug=slug)
+    # выбираем все статьи по выбранной категории
+    news = category.new_set.all()
+    # возвращаем выбранную категорию и статьи в шаблон category.html
+    return render(request, 'tagpage.html', {'news': news,
+                                            'category': category})
 
-# class CategoryListView(generic.TemplateView):
-# #    template_name = 'news/content.html'
-#     category = Category.objects.all()
-#     def get_context_data(self, **kwargs):
-#         context = super(CategoryListView, self).get_context_data(**kwargs)
-#         context["category"] = self.category
-#         return context
+def tag (request, slug): # тут все тоже самое
+    tag = Tag.objects.select_related().get(slug=slug)
+    news = tag.post_set.all()
+    return render(request, 'tagpage.html', {'news': news, 'tag': tag})

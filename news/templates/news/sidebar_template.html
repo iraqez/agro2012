@@ -17,7 +17,7 @@
     <h4>Категорії</h4>
     <div class="hline"></div>
     {% for cats in categories %}
-        <p class="blog-p4"><a href="#"><i class="fa fa-angle-right"></i> {{ cats.name }}</a> <span class="badge badge-theme pull-right">9</span></p>
+        <p class="blog-p4"><a href="{% url 'news' %}{{ cats.slug }}"><i class="fa fa-angle-right"></i> {{ cats.name }}</a> <span class="badge badge-theme pull-right">9</span></p>
     {% endfor %}
     <div class="spacing"></div>
     <h4>Останні новини</h4>
