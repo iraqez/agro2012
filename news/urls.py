@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^(?P<slug>[\w-]+)/$', NewsDetailView.as_view()),
    #  url(r'^test/$', CategoryListView.as_view()),
     # выборку будем делать по slug, представление - category
-    url(r'^(?P<slug>[\w-]+)/$', 'category'),
+ #   url(r'^(?P<slug>[\w-]+)/$', 'category'),
  #   url(r'^tag/(?P<slug>[\w-]+)/$', 'tag'),  # тут тоже самое
 ]
