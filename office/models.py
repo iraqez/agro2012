@@ -2,7 +2,7 @@ from django.db import models
 
 class Office(models.Model):
     OFFICE_TYPE = (
-        ('CO', 'Головний офіс'),
+        ('CO', 'Центральний офіс'),
         ('RO', 'Регіональний офіс'),
     )
     office_type = models.CharField(max_length=2, choices=OFFICE_TYPE, default='RO')
