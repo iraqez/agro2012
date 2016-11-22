@@ -5,7 +5,7 @@ class Office(models.Model):
         ('CO', 'Головний офіс'),
         ('RO', 'Регіональний офіс'),
     )
-    office_type = models.CharField(max_length=2, choices=OFFICE_TYPE, default='Регіональний офіс')
+    office_type = models.CharField(max_length=2, choices=OFFICE_TYPE, default='RO')
     TYPE_SITY =         (
         ('1', 'м.'),
         ('2', 'смт.'),
@@ -23,3 +23,7 @@ class Office(models.Model):
 
     def __str__(self):
         return self.get_office_type_display() + ' ' + self.get_type_sity_display() + ' ' + self.sity_office
+
+    class Meta:
+        verbose_name = "офіс"
+        verbose_name_plural = "офіси"
