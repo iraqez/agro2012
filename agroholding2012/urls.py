@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^', include('main.urls')),
  #   url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', admin.site.urls),
+    url(r'^tiny_mce/', include('tinymce.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()

@@ -3,6 +3,7 @@ from datetime import datetime
 from django_resized import ResizedImageField
 from sorl.thumbnail import get_thumbnail
 from autoslug import AutoSlugField
+from tinymce.models import HTMLField
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='Назва категорії')
@@ -26,7 +27,8 @@ class New(models.Model):
     image = ResizedImageField(size=[850, 850], upload_to='news', verbose_name='Фото')
     title = models.CharField(max_length=150, unique_for_date='posted', verbose_name='Заголовок')
     slug = AutoSlugField(unique=True, verbose_name='Адресна строка')
-    content = models.TextField(verbose_name='Зміст')
+    content = HTMLField(verbose_name='Зміст')
+    # content = models.TextField(verbose_name='Зміст')
     category = models.ForeignKey(Category, verbose_name='Оберіть категорію')
     tag = models.ManyToManyField(Tag, verbose_name='Оберіть теги для статті')
     posted = models.DateTimeField(default=datetime.now(), db_index=True, verbose_name='Опублікована')

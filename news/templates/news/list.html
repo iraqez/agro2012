@@ -17,7 +17,7 @@
 				</a>
 				<a href="{{ news.get_absolute_url }}" class="blog-link"><h3 class="ctitle">{{ news.title }}</h3></a>
 				<p class="blog-p1"><small>Додано: {{ news.posted }}</small></p>
-				<p class="blog-p2">{{ news.content }}</p>
+				<p class="blog-p2">{{ news.content|safe }}</p><br>
 				<p class="blog-p3"><a href="{{ news.get_absolute_url }}" class="btn-outline">більше</a></p>
 				<div class="hline"></div>
 				<div class="spacing"></div>

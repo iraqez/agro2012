@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'image_cropping',
     'django_cleanup',
+    'tinymce',
 
     'main',
     # 'employees',

@@ -5,6 +5,8 @@ django-cleanup==0.4.2
 django-grappelli==2.8.2
 django-image-cropping==1.0.3
 django-resized==0.3.5
+django-tinymce==2.4.0
+django-tinymce4==3.0.2
 easy-thumbnails==2.3
 Pillow==3.4.2
 pytz==2016.7
