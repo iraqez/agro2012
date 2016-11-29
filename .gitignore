@@ -1,0 +1,18 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+/agro2012/local_settings.py
+__pycache__/
+agro2012/__pycache__/
+db.sqlite3
+main/__pycache__/
+main/migrations/__pycache__/
+main/templatetags/__pycache__/
+media/
+news/__pycache__/
+news/migrations/0001_initial.py
+news/migrations/__pycache__/
+news/templatetags/__pycache__/
+office/__pycache__/
+office/migrations/0001_initial.py
+office/migrations/__pycache__/
+!/.gitignore
