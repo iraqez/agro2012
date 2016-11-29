@@ -26,6 +26,13 @@ SECRET_KEY = 'qt++fg*-!xkrgj=u&y#onfom_4uczz-+^$5x@=vo$w&9jxd02-'
 #DEBUG = False
 DEBUG = True
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
@@ -72,7 +79,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'agroholding2012.urls'
+ROOT_URLCONF = 'agro2012.urls'
 
 TEMPLATES = [
     {
@@ -99,14 +106,21 @@ WSGI_APPLICATION = 'agro2012.wsgi.application'
 
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'agro2012',
-    'USER': 'postgres',
-    'PASSWORD': 'workfree',
-    'HOST': 'localhost', # Set to empty string for localhost.
-    'PORT': '5432', # Set to empty string for default.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': 'agro2012',
+#     'USER': 'postgres',
+#     'PASSWORD': 'workfree',
+#     'HOST': 'localhost', # Set to empty string for localhost.
+#     'PORT': '5432', # Set to empty string for default.
+#     }
+# }
 
 
 # Password validation
