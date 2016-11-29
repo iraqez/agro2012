@@ -31,6 +31,8 @@ ALLOWED_HOSTS = [
     'localhost',
     'agro2012.com.ua',
     'www.agro2012.com.ua',
+    'dev.agro2012.com.ua',
+    'www.dev.agro2012.com.ua',
 ]
 
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '.'))
