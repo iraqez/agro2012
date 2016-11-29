@@ -97,21 +97,14 @@ WSGI_APPLICATION = 'agro2012.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'agro2012',
+    'USER': 'postgres',
+    'PASSWORD': 'workfree',
+    'HOST': 'localhost', # Set to empty string for localhost.
+    'PORT': '5432', # Set to empty string for default.
     }
 }
-
-# DATABASES = {
-#     'default': {
-#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#     'NAME': 'agro2012',
-#     'USER': 'postgres',
-#     'PASSWORD': 'workfree',
-#     'HOST': 'localhost', # Set to empty string for localhost.
-#     'PORT': '5432', # Set to empty string for default.
-#     }
-# }
 
 
 # Password validation
