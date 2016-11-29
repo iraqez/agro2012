@@ -4,8 +4,8 @@ import sys
 from osenv import osenv
 
 if __name__ == "__main__":
-    osenv = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "agro2012.dev_settings")
-    #osenv
+    #osenv = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "agro2012.dev_settings")
+    osenv
     try:
         from django.core.management import execute_from_command_line
     except ImportError:
