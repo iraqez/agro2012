@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'agroholding2012.wsgi.application'
+WSGI_APPLICATION = 'agro2012.wsgi.application'
 
 
 # Database
@@ -105,7 +105,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#     'NAME': 'agroholding2012',
+#     'NAME': 'agro2012',
 #     'USER': 'postgres',
 #     'PASSWORD': 'workfree',
 #     'HOST': 'localhost', # Set to empty string for localhost.
