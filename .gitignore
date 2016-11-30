@@ -16,3 +16,7 @@ office/__pycache__/
 office/migrations/0001_initial.py
 office/migrations/__pycache__/
 !/.gitignore
+/local_manage.py
+local_manage.py
+news/migrations/0002_auto_20161130_1130.py
+news/migrations/0003_auto_20161130_1131.py

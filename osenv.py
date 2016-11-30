@@ -5,4 +5,4 @@
 
 import os
 
-osenv = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "agro2012.dev_settings")
+osenv = os.environ.setdefault("DJANGO_SETTINGS_MODULE", "agro2012.local_settings")
