@@ -12,7 +12,7 @@ SECRET_KEY = 'qt++fg*-!xkrgj=u&y#onfom_4uczz-+^$5x@=vo$w&9jxd02-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -153,16 +153,3 @@ IMAGE_CROPPING_THUMB_SIZE = (600, 600)
 IMAGE_CROPPING_JQUERY_URL = 'js/jquery.min.js'
 THUMBNAIL_DEBUG = True
 HEADLESS = True
-
-# import autoslug
-# # using as many characters as needed to make a natural replacement
-# AUTOSLUG_SLUGIFY_FUNCTION = 'autoslug.utils.translit_long'
-#
-# # using the minimum number of characters to make a replacement
-# AUTOSLUG_SLUGIFY_FUNCTION = 'autoslug.utils.translit_short'
-#
-# # only performing single character replacements
-# AUTOSLUG_SLUGIFY_FUNCTION = 'autoslug.utils.translit_one'
-# # TEMPLATE_CONTEXT_PROCESSORS = (
-# #
-# # )
