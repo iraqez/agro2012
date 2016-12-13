@@ -3,26 +3,30 @@
 {% load thumbnail %}
 
 {% block list %}
-    			<div class="col-lg-8 slideanim">
-            {% for new in news %}
-				<!-- Blog Post 1 -->
-				<a href="{{ new.get_absolute_url }}">
-					<div class="hover01 column">
-						<div>
-                            {% thumbnail new.image '850x400' crop="center" as im %}
-							<figure><img class="img-responsive" src="{{ im.url }}" alt="{{ new.slug }}" title="{{ new.title }}"></figure>
-						    {% endthumbnail %}
-                        </div>
-					</div>
-				</a>
-				<a href="{{ new.get_absolute_url }}" class="blog-link"><h3 class="ctitle">{{ new.title }}</h3></a>
-				<p class="blog-p1"><small>Додано: {{ new.posted }}</small></p>
-				<p class="blog-p2">{{ new.content }}</p><br>
-				<p class="blog-p3"><a href="{{ new.get_absolute_url }}" class="btn-outline">більше</a></p>
-				<div class="hline"></div>
-				<div class="spacing"></div>
-            {% endfor %}
-			</div><!-- /col-lg-8 -->
+    <h2>Статьи в категории - {{ category.name }}:</h2>
+    	{% for new in news %}
+        	<p><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></p>
+    	{% endfor %}
+{#    			<div class="col-lg-8 slideanim">#}
+{#            {% for new in news %}#}
+{#				<!-- Blog Post 1 -->#}
+{#				<a href="{{ new.get_absolute_url }}">#}
+{#					<div class="hover01 column">#}
+{#						<div>#}
+{#                            {% thumbnail new.image '850x400' crop="center" as im %}#}
+{#							<figure><img class="img-responsive" src="{{ im.url }}" alt="{{ new.slug }}" title="{{ new.title }}"></figure>#}
+{#						    {% endthumbnail %}#}
+{#                        </div>#}
+{#					</div>#}
+{#				</a>#}
+{#				<a href="{{ new.get_absolute_url }}" class="blog-link"><h3 class="ctitle">{{ new.title }}</h3></a>#}
+{#				<p class="blog-p1"><small>Додано: {{ new.posted }}</small></p>#}
+{#				<p class="blog-p2">{{ new.content }}</p><br>#}
+{#				<p class="blog-p3"><a href="{{ new.get_absolute_url }}" class="btn-outline">більше</a></p>#}
+{#				<div class="hline"></div>#}
+{#				<div class="spacing"></div>#}
+{#            {% endfor %}#}
+{#			</div><!-- /col-lg-8 -->#}
 {% endblock list %}
 {#{% block category %}#}
 

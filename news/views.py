@@ -10,9 +10,9 @@ class NewsDetailView(generic.DetailView):
     model = New
     template_name = 'news/detail.html'
 
-def category(request, id): # получаем аргумент id
+def category(request, slug): # получаем аргумент id
     # делаем выборку выбранной категории
-    category = Category.objects.select_related().get(id=id)
+    category = Category.objects.select_related().get(slug=slug)
     # выбираем все статьи по выбранной категории
     news = category.new_set.all()
     # возвращаем выбранную категорию и статьи в шаблон category.html
