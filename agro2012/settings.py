@@ -78,6 +78,10 @@ TEMPLATES = [
     },
 ]
 
+# TEMPLATES_LOADERS = (
+#     "admin_tools.template_loaders.Loader",
+# )
+
 WSGI_APPLICATION = 'agro2012.wsgi.application'
 
 

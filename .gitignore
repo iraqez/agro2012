@@ -20,3 +20,4 @@ office/migrations/__pycache__/
 local_manage.py
 news/migrations/0002_auto_20161130_1130.py
 news/migrations/0003_auto_20161130_1131.py
+media/
